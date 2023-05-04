@@ -4,3 +4,7 @@
 install.packages('openxlsx')
 library(openxlsx)
 ```
+
+```{r}
+df <- read.xlsx(xlsxFile = 'dataset.xlsx')
+```
