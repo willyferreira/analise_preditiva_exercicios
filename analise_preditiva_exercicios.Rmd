@@ -1,10 +1,23 @@
 /
 
 ```{r}
-install.packages('openxlsx')
+#install.packages('openxlsx')
 library(openxlsx)
 ```
 
 ```{r}
-df <- read.xlsx(xlsxFile = 'dataset.xlsx')
+#leitura do dataframe
+df <- read.xlsx(
+  xlsxFile = 'dataset.xlsx',
+  sheet = 'questoes1e2'
+  )
+```
+
+```{r}
+#estrutura do dataframe
+str(df)
+```
+
+```{r}
+summary(df)
 ```
