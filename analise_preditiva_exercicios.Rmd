@@ -1,8 +1,12 @@
 /
 
 ```{r}
-#install.packages('openxlsx')
-library(openxlsx)
+#Leitura de arquivos Excel
+#install.packages('openxlsx') 
+#Crosstable
+install.packages('gmodels') 
+#library(openxlsx)
+library(gmodels)
 ```
 
 ```{r}
@@ -20,4 +24,24 @@ str(df)
 
 ```{r}
 summary(df)
+```
+
+##### Alterando o nome das variáveis
+
+```{r}
+names(df) <- c('funcionario',
+               'status',
+               'idade',
+               'estado_civil',
+               'distancia_empresa',
+               'tipo_residencia',
+               'primeiro_emprego',
+               'resultado_teste')
+```
+
+```{r}
+CrossTable(df$idade, df$status,
+           prop.chisq = FALSE,
+           prop.t = FALSE,
+           prop.c = FALSE)
 ```
