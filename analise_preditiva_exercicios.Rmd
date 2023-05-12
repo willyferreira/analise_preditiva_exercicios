@@ -40,7 +40,15 @@ names(df) <- c('funcionario',
 ```
 
 ```{r}
-CrossTable(df$idade, df$status,
+CrossTable(df$status, df$idade,
+           prop.chisq = FALSE,
+           prop.t = FALSE,
+           prop.c = FALSE,
+           format = 'SPSS')
+```
+
+```{r}
+CrossTable(df$status, df$estado_civil,
            prop.chisq = FALSE,
            prop.t = FALSE,
            prop.c = FALSE,
