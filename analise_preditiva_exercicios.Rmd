@@ -43,5 +43,6 @@ names(df) <- c('funcionario',
 CrossTable(df$idade, df$status,
            prop.chisq = FALSE,
            prop.t = FALSE,
-           prop.c = FALSE)
+           prop.c = FALSE,
+           format = 'SPSS')
 ```
